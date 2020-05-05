@@ -1,0 +1,17 @@
+console.log('Hello Winc Academy');
+let firstName = 'Lesley';
+console.log(firstName);
+let age = 34;
+let otherAge = 67;
+let newAge = age + otherAge;
+console.log(newAge);
+let lastName = 'Oehlers';
+let name = firstName + ' ' + lastName;
+console.log(name);
+console.log(age - otherAge);
+console.log(age * otherAge);
+console.log(age / otherAge);
+console.log(age % otherAge);
+console.log(typeof age);
+age = "34";
+console.log(typeof age);
