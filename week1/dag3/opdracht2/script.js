@@ -1,7 +1,7 @@
 // makeCheeseSandwich
-// add slice of bread.
-// add slice of cheese.
-// add slice of bread.
+//  add slice of bread.
+//  add slice of cheese.
+//  add slice of bread.
 
 const makeCheeseSandwich = () => {
     console.log('add slice of bread.');
