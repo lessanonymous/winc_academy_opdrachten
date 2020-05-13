@@ -130,23 +130,12 @@ const heroesMarvelComics = superheroes.filter(superhero => superhero.publisher =
 
 console.log(heroesMarvelComics);
 
-const totalWeightDCComics = superheroes.reduce((total, currentSuperhero) => {
-    if (currentSuperhero.publisher === 'DC Comics') {
-        return Number(currentSuperhero.weight) ? total + Number(currentSuperhero.weight) : total;
-    } else {
-        return total;
-    }
-}, 0);
+const totalWeightDCComics = superheroes.filter(superhero => superhero.publisher === 'DC Comics').reduce((total, currentSuperhero) => Number(currentSuperhero.weight) ? total + Number(currentSuperhero.weight) : total, 0);
 
 console.log(totalWeightDCComics);
 
-const totalWeightMarvelComics = superheroes.reduce((total, currentSuperhero) => {
-    if (currentSuperhero.publisher === 'Marvel Comics') {
-        return Number(currentSuperhero.weight) ? total + Number(currentSuperhero.weight) : total;
-    } else {
-        return total;
-    }
-}, 0);
+const totalWeightMarvelComics = superheroes.filter(superhero => superhero.publisher === 'Marvel Comics').reduce((total, currentSuperhero) => Number(currentSuperhero.weight) ? total + Number(currentSuperhero.weight) : total, 0);
+
 
 console.log(totalWeightMarvelComics);
 
