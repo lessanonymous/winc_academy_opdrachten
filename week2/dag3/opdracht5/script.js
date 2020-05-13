@@ -150,14 +150,6 @@ const totalWeightMarvelComics = superheroes.reduce((total, currentSuperhero) => 
 
 console.log(totalWeightMarvelComics);
 
-const bigMan = superheroes.reduce((biggest, currentSuperhero) => {
-    if (Number(biggest.weight) && Number(currentSuperhero.weight)) {
-        return Number(currentSuperhero.weight) > Number(biggest.weight) ? currentSuperhero : biggest;
-    } else if (!Number(biggest.weight) && Number(currentSuperhero.weight)) {
-        return currentSuperhero;
-    } else {
-        return biggest;
-    }
-});
+const bigMan = superheroes.filter(superhero => !Number.isNaN(Number(superhero.weight))).reduce((biggest, currentSuperhero) => Number(currentSuperhero.weight) > Number(biggest.weight) ? currentSuperhero : biggest);
 
 console.log(bigMan);
