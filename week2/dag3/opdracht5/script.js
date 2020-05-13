@@ -110,7 +110,7 @@ const superheroNames = superheroes.map(superhero => superhero.name);
 
 console.log(superheroNames);
 
-const lightSuperheroes = superheroes.filter(superhero => superhero.weight < 190);
+const lightSuperheroes = superheroes.filter(superhero => Number(superhero.weight) < 190);
 
 console.log(lightSuperheroes);
 
