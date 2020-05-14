@@ -1,8 +1,8 @@
-const buttons = document.querySelectorAll('.big-five-button');
+const addButtons = document.querySelectorAll('.big-five-button');
 const spottedAnimalsList = document.querySelector('#spotted-animals-list');
 const removeFirstItemButton = document.querySelector('#remove-first-item-button');
 const removeAllItemsButton = document.querySelector('#remove-all-button');
-const handleButtonClickEvent = e => {
+const handleAddButtonClickEvent = e => {
     const newLI = document.createElement('li');
     newLI.innerHTML = e.target.innerHTML;
     newLI.className = 'spotted-animals-list-item';
@@ -16,6 +16,6 @@ const handleRemoveAllButtonClickEvent = e => {
     spottedAnimalsListItems.forEach(item => spottedAnimalsList.removeChild(item));
 };
 
-buttons.forEach(button => button.addEventListener('click', handleButtonClickEvent));
+addButtons.forEach(button => button.addEventListener('click', handleAddButtonClickEvent));
 removeFirstItemButton.addEventListener('click', handleRemoveFirstButtonClickEvent);
 removeAllItemsButton.addEventListener('click', handleRemoveAllButtonClickEvent);
