@@ -9,7 +9,10 @@ const handleAddButtonClickEvent = e => {
     spottedAnimalsList.appendChild(newLI);
 };
 
-const handleRemoveFirstButtonClickEvent = e => spottedAnimalsList.removeChild(document.querySelector('.spotted-animals-list-item'));
+const handleRemoveFirstButtonClickEvent = e => {
+    const spottedAnimalsListItems = document.querySelectorAll('.spotted-animals-list-item');
+    if (spottedAnimalsListItems.length) spottedAnimalsList.removeChild(document.querySelector('.spotted-animals-list-item'));
+};
 
 const handleRemoveAllButtonClickEvent = e => {
     const spottedAnimalsListItems = document.querySelectorAll('.spotted-animals-list-item');
