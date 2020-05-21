@@ -1,7 +1,7 @@
 // helper for creating new elements
 const createElement = (data, elementType) => {
     const element = document.createElement(elementType);
-    data.title ? element.innerHTML = data.title : element.innerHTML = `Genre naam: ${data.name}, id: ${data.id}`;
+    data.title ? element.textContent = data.title : element.textContent = `Genre naam: ${data.name}, id: ${data.id}`;
     return element;
 };
 // helper for adding elements to DOM
