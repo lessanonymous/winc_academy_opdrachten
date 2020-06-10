@@ -8,7 +8,7 @@ const wordList = [
   "telefoon",
   "moeder",
   "snoer",
-  "geeuw"
+  "geeuw",
 ];
 
 const maxGuesses = 5;
@@ -18,7 +18,7 @@ class AppContainer extends React.Component {
     chosenWord: "",
     guessedLetters: [],
     currentChosenLetter: "",
-    maxGuesses: maxGuesses
+    maxGuesses: maxGuesses,
   };
 
   chooseWord(list) {
@@ -27,27 +27,27 @@ class AppContainer extends React.Component {
     return list[index];
   }
 
-  restartGameHandler = event => {
+  restartGameHandler = (event) => {
     this.setState({
       chosenWord: this.chooseWord(wordList),
       guessedLetters: [],
-      currentChosenLetter: ""
+      currentChosenLetter: "",
     });
   };
 
-  chosenLetterHandler = event => {
+  chosenLetterHandler = (event) => {
     const newState = { ...this.state };
     newState.currentChosenLetter = event.target.value;
     this.setState(newState);
   };
 
-  guessLetterHandler = event => {
+  guessLetterHandler = (event) => {
     if (this.state.currentChosenLetter.length > 0) {
       const newGuessedLetters = [...this.state.guessedLetters];
       newGuessedLetters.push(this.state.currentChosenLetter);
       this.setState({
         guessedLetters: newGuessedLetters,
-        currentChosenLetter: ""
+        currentChosenLetter: "",
       });
     }
     event.preventDefault();
